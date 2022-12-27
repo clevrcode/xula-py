@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# BIT FPGA files
+*.bit
+
 # C extensions
 *.so
 
