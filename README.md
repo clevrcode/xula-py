@@ -17,7 +17,7 @@ bytes object constructor.
 
 4- Change .tostring() to .tobytes() for Bitstream objects.
 
-5- In jtag.py, changed it.next() to it.**next**(). Could have changed to next(it).
+5- In jtag.py, changed it.next() to it.\_\_next\_\_(). Could have changed to next(it).
 
 6- In rdflash.py, added validation of address values arguments. Also added option to
 specify hex values by prefixing with '0x' or '0X'.
