@@ -1,22 +1,5 @@
 # Test Bitstream Generator
-
-class Bitstream:
-    """
-    Simple bitstream specified as a count and integer value.
-    """
-    def __init__(self, n, val):
-        self.n = n
-        self.val = val
-
-    def __iter__(self):
-        def getbits():
-            for i in range(self.n):
-                yield (self.val >> i) & 1
-        return getbits()
-
-    def __len__(self):
-        return self.n
-
+from bitstream import Bitstream
 
 def islast(o):
     it = o.__iter__()
@@ -30,9 +13,8 @@ def islast(o):
             yield (True, e)
             break
 
+# bs = Bitstream(6, int("000010", 2))
+bs = Bitstream(16, 0xaacc)
 
-USER1 = Bitstream(6, int("000010", 2))
-
-bs = USER1
 for (is_lastbit, d) in islast(bs):
     print(f"last: {is_lastbit}  bit: {d}")
