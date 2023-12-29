@@ -2,7 +2,6 @@
 
 import sys
 import time
-import string
 
 from xula import XuLA, elapsed, UnknownDevice
 # from bitstream import Bitstream, BitstreamHex, BitFile
